@@ -1971,6 +1971,9 @@
       <column name="CURRENT_CONNECTIONS" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
       <column name="TOTAL_CONNECTIONS" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
     </table>
+    <table name="idgen" schema="" catalog="test" type="TABLE">
+      <column name="NEXT" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
     <table name="person" schema="" catalog="test" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="first_name" sqlType="VARCHAR" length="50" precision="0" nullable="true" jdbcType="12"/>
@@ -1978,7 +1981,6 @@
       <column name="birth_year" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="player_ibfk_1" table="player" schema="" catalog="test" columns="person"/>
-      <exported-key name="users_person" table="user" schema="" catalog="test" columns="person_id"/>
     </table>
     <table name="player" schema="" catalog="test" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -1987,16 +1989,6 @@
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="player_ibfk_1" columns="person" ref-table="person" ref-schema="" ref-catalog="test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
       <index name="fk_person_id" unique="false" columns="person"/>
-    </table>
-    <table name="user" schema="" catalog="test" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="username" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" def="Jyc="/>
-      <column name="password" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" def="Jyc="/>
-      <column name="email" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="last_login" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="person_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="users_person" columns="person_id" ref-table="person" ref-schema="" ref-catalog="test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
     </table>
   </data-source>
 </component>

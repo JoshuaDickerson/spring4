@@ -1,6 +1,7 @@
 package com.springapp4.mvc;
 
 import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Table;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,26 +12,27 @@ import java.sql.Date;
  * Created by josh on 12/21/13.
  */
 @Entity
+@Table(appliesTo = "user")
 public class User {
 
 
     private Long id;
 
-    private Person person;
+//    private Person person;
     private String password;
     private String username;
     private String email;
     private Date lastLogin;
 
 
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
+////
+//    public Person getPerson() {
+//        return person;
+//    }
+//
+//    public void setPerson(Person person) {
+//        this.person = person;
+//    }
 
     public String getPassword() {
         return password;

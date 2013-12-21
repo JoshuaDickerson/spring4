@@ -23,6 +23,8 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
 
+        System.err.println("Making fCTORY.");
+
 
         try{
             factory = new Configuration().configure().buildSessionFactory();
@@ -33,10 +35,10 @@ public class UserController {
 
         Session session = factory.openSession();
         session.beginTransaction();
-        List<User> users = session.createQuery("FROM User").list();
-        System.out.println("working");
+        List<Person> users = session.createQuery("FROM Person").list();
+        String usersize = users.size()+"";
 
-        model.addAttribute("users", "hello");
+        model.addAttribute("json", usersize);
         return "json";
     }
 

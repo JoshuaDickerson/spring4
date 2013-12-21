@@ -24,6 +24,8 @@
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons-core:1.4.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.6.1" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.6.12" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:3.6.10.Final" />
@@ -38,9 +40,7 @@
           <element id="library" level="project" name="Maven: javassist:javassist:3.12.0.GA" />
           <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.2.9" />
           <element id="library" level="project" name="Maven: org.json:json:20080701" />
-          <element id="library" level="project" name="hibernate:hibernate-entitymanager:3.4.0.GA" />
-          <element id="library" level="project" name="com.mysql.jdbc:com.springsource.com.mysql.jdbc:5.1.6" />
-          <element id="library" level="project" name="org.slf4j:com.springsource.slf4j.org.apache.commons.logging:1.6.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.13" />
         </element>
       </element>
     </root>

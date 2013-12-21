@@ -11,10 +11,10 @@
         <property column="password" name="password" type="java.lang.String"/>
         <property column="username" name="username" type="java.lang.String"/>
         <property column="email" name="email" type="java.lang.String"/>
-        <property column="last_login" length="4" name="lastLogin" type="java.sql.Date"/>
-        <set name="person" lazy="true" inverse="true" cascade="all-delete-orphan">
-            <key column="id" />
-            <one-to-many class="com.springapp4.mvc.Person" />
-        </set>
+        <property column="last_login" name="lastLogin" type="java.sql.Date"/>
+        <!--<set name="person" lazy="true" inverse="true" cascade="all-delete-orphan">-->
+            <!--<key column="id" />-->
+            <!--<one-to-many class="com.springapp4.mvc.Person" />-->
+        <!--</set>-->
     </class>
 </hibernate-mapping>

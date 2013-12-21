@@ -1,9 +1,13 @@
 
 package com.springapp4.mvc;
 
-import javax.persistence.*;
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Table;
+
 import java.sql.Date;
 
+@Entity
+@Table(appliesTo = "person")
 public class Person {
     private Long id;
     private String firstName;
