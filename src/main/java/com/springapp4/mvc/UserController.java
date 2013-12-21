@@ -2,6 +2,7 @@
 package com.springapp4.mvc;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.classic.Session;
 import org.springframework.stereotype.Controller;
@@ -23,23 +24,26 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
 
-        System.err.println("Making fCTORY.");
+        System.err.println("Making factory.");
+        factory = new Configuration().configure().buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction tx = null;
 
 
         try{
-            factory = new Configuration().configure().buildSessionFactory();
+            tx = session.beginTransaction();
+            List<Person> users = session.createQuery("FROM Person").list();
+            String usersize = users.size()+"";
+            tx.commit();
         }catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
             throw new ExceptionInInitializerError(ex);
+        }finally {
+            session.close();
         }
 
-        Session session = factory.openSession();
-        session.beginTransaction();
-        List<Person> users = session.createQuery("FROM Person").list();
-        String usersize = users.size()+"";
-
-        model.addAttribute("json", usersize);
-        return "json";
+        model.addAttribute("json", "hello");
+        return "users";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
