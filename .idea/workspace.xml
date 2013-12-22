@@ -6,25 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1629b1ef-f23c-4f44-adf6-baa4fa3eef90" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/model/Api.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/controller/ApiController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/controller/PlayerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/controller/TeamController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/Person.java" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/model/Person.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/model/Player.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/Team.java" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/model/Team.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/model/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/springapp4/mvc/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/person.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/person.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/player.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/player.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/team.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/team.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/user.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/user.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL/test_2013-12-22.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spring4.iws" />
@@ -592,6 +574,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -1049,12 +1045,12 @@
       <updated>1387144287708</updated>
       <workItem from="1387144294471" duration="20749000" />
       <workItem from="1387725721715" duration="34000" />
-      <workItem from="1387725798448" duration="1861000" />
+      <workItem from="1387725798448" duration="1932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22644000" />
+    <option name="totallyTimeSpent" value="22715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="967" extended-state="6" />
