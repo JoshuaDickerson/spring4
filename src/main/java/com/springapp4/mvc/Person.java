@@ -4,11 +4,12 @@ package com.springapp4.mvc;
 import org.hibernate.annotations.Entity;
 import org.hibernate.annotations.Table;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
 @Table(appliesTo = "person")
-public class Person {
+public class Person implements Serializable{
     private Long id;
     private String firstName;
     private String lastName;
