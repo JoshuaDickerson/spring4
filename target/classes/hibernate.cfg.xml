@@ -11,9 +11,9 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">password</property>
         <!--<property name="hibernate.hbm2ddl.auto">create-drop</property>-->
-        <mapping class="com.springapp4.mvc.Person" resource="person.hbm.xml"/>
-        <mapping class="com.springapp4.mvc.Player" resource="player.hbm.xml"/>
-        <mapping class="com.springapp4.mvc.User" resource="user.hbm.xml"/>
-        <mapping class="com.springapp4.mvc.Team" resource="team.hbm.xml"/>
+        <mapping class="com.springapp4.mvc.model.Person" resource="person.hbm.xml"/>
+        <mapping class="com.springapp4.mvc.model.Player" resource="player.hbm.xml"/>
+        <mapping class="com.springapp4.mvc.model.User" resource="user.hbm.xml"/>
+        <mapping class="com.springapp4.mvc.model.Team" resource="team.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

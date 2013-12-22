@@ -1990,6 +1990,21 @@
       <column name="jersey" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="player_ibfk_1" columns="fk_person_id" ref-table="person" ref-schema="" ref-catalog="test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <exported-key name="players" table="player_team_map" schema="" catalog="test" columns="fk_player_id"/>
+    </table>
+    <table name="player_team_map" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fk_player_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="fk_team_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="teams" columns="fk_team_id" ref-table="team" ref-schema="" ref-catalog="test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="players" columns="fk_player_id" ref-table="player" ref-schema="" ref-catalog="test" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="team" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="30" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="teams" table="player_team_map" schema="" catalog="test" columns="fk_team_id"/>
     </table>
     <table name="user" schema="" catalog="test" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>

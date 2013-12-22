@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.springapp4.mvc.model.Team" table="team">
+        <id column="id" name="id" type="java.lang.Long">
+            <generator class="org.hibernate.id.TableHiLoGenerator">
+                <param name="table">idgen</param>
+                <param name="column">NEXT</param>
+            </generator>
+        </id>
+        <property column="name" name="name" type="java.lang.String"/>
+        <set name="players" table="player_team_map" cascade="all">
+            <key column="id" />
+            <many-to-many column="fk_player_id"  class="com.springapp4.mvc.model.Player" />
+        </set>
+    </class>
+</hibernate-mapping>
