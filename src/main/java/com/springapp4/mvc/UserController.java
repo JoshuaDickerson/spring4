@@ -37,6 +37,10 @@ public class UserController {
         try{
             tx = session.beginTransaction();
 
+            // this is a super nested set of objects
+            // a team has players, and players have a person
+            List<Team> teams = session.createQuery("FROM Team").list();
+
             List<Player> players = session.createQuery("FROM Player").list();
 
             // get all the Persons from the person table

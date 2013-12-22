@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="893870398">
+  <component name="DataSourceManagerImpl" format="xml" hash="2356272544">
     <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="d9a9c35e-38e9-4c07-8faa-cc73415fcf4e">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

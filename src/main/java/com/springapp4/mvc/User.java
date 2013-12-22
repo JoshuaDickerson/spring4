@@ -3,9 +3,7 @@ package com.springapp4.mvc;
 import org.hibernate.annotations.Entity;
 import org.hibernate.annotations.Table;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
@@ -18,21 +16,21 @@ public class User {
 
     private Long id;
 
-//    private Person person;
+    private Person person;
     private String password;
     private String username;
-    private String email;
     private Date lastLogin;
 
 
-////
-//    public Person getPerson() {
-//        return person;
-//    }
-//
-//    public void setPerson(Person person) {
-//        this.person = person;
-//    }
+    @OneToOne(fetch = FetchType.EAGER, cascade = {javax.persistence.CascadeType.PERSIST})
+    @JoinColumn (name = "id")
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
     public String getPassword() {
         return password;
@@ -50,13 +48,6 @@ public class User {
         this.username = username;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
     public Long getId() {
         return id;
     }
