@@ -10,5 +10,11 @@
         </id>
         <property column="first_name" name="firstName" type="java.lang.String"/>
         <property column="last_name" name="lastName" type="java.lang.String"/>
+
+        <joined-subclass name="com.springapp4.mvc.model.Player" table="player">
+            <key column="fk_person_id"/>
+            <property name="jersey" column="jersey"/>
+            <property name="playerId" column="id" />
+        </joined-subclass>
     </class>
 </hibernate-mapping>
