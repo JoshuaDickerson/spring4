@@ -13,33 +13,26 @@ import java.sql.Date;
  */
 @Entity
 @Table(appliesTo = "player")
-public class Player {
-
-
-    private Long id;
-
-
-
-    private Person person;
+public class Player extends Person {
+    private Long playerId;
     private int jersey;
     private Date lastLogin;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = {javax.persistence.CascadeType.PERSIST})
-    @JoinColumn (name = "id")
-    public Person getPerson() {
-        return person;
+    public Player(String firstName, String lastName, int jersey){
+        super(firstName, lastName);
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
+    public Player() {
     }
 
-    public Long getId() {
-        return id;
+    @Column(name = "id")
+    @GeneratedValue
+    public Long getPlayerId() {
+        return playerId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setPlayerId(Long id) {
+        this.playerId = id;
     }
 
     public int getJersey() {
@@ -50,11 +43,17 @@ public class Player {
         this.jersey = jersey;
     }
 
-    public String getFirstName(){
-        return person.getFirstName();
+    public void setFirstName(String fn){
+        super.setFirstName(fn);
     }
 
-    public void setFirstName(String fn){
-        this.person.setFirstName(fn);
+    @Override
+    public String getLastName() {
+        return super.getLastName();
+    }
+
+    @Override
+    public void setLastName(String lastName) {
+        super.setLastName(lastName);
     }
 }

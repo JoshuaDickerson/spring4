@@ -13,8 +13,6 @@ import java.sql.Date;
 @Entity
 @Table(appliesTo = "user")
 public class User {
-
-
     private Long id;
 
     private Person person;
