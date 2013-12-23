@@ -15,5 +15,6 @@
         <!--<mapping class="com.springapp4.mvc.model.Player" resource="player.hbm.xml"/>-->
         <mapping class="com.springapp4.mvc.model.User" resource="user.hbm.xml"/>
         <mapping class="com.springapp4.mvc.model.Team" resource="team.hbm.xml"/>
+        <mapping class="com.springapp4.mvc.model.Address" resource="address.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
